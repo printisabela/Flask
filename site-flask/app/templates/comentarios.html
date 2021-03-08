@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Comentarios{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+{% endblock %}
+{% block content %}
+
+{% if comentarios %}
+{% for comentario in comentarios %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"> {{comentario.nome_usuario}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted"> Nota:  {{comentario.nota}}</h6>
+        <p class="card-text">
+            {{comentario.corpo}}
+        </p>
+ 
+    </div>
+</div>
+
+
+{% endfor %}
+
+
+{% endif %}
+{% endblock %}

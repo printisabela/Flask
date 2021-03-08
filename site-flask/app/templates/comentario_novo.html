@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Novo Comentario{% endblock %}
+{% block content %}
+<h1>Novo Comentario</h1>
+<form action="" method="post">
+  {{ form.hidden_tag() }}
+  <p>
+    {{ form.nome.label }}<br>
+    {{ form.nome(size=64) }}
+  </p>
+  <p>
+    {{ form.corpo.label }}<br>
+    {{ form.corpo }}
+  </p>
+  <p>
+    {{ form.nota.label }}<br>
+    {{ form.nota(size=10) }}
+  </p>
+  <p>
+    {{ form.submit() }}
+  </p>
+</form>
+{% endblock %}
