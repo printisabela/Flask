@@ -11,5 +11,6 @@ class Carro(db.Model):
 
   comentarios = db.relationship('Comentario', backref='autor', lazy='dynamic')
 
+
   def __repr__(self):
     return '<Carro {} ({})>'.format(self.modelo, self.ano)

@@ -13,6 +13,8 @@ class Comentario(db.Model):
 
   
   carro_id = db.Column(db.Integer(), db.ForeignKey('carro.id'))
+  usuario_id = db.Column(db.Integer(), db.ForeignKey('usuario.id'))
+
 
   def __repr__(self):
     return '<Avaliação {}>'.format(self.nota)
